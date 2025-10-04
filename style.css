@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(198, 198, 198);
+
+
+.title {
+    color: rgb(137, 134, 46);
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    padding: 7rem 5rem;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-images {
+    display: flex;
+    column-gap: 3.5rem;
+}
+
+.container.start .user-result {
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50%{
+        transform: rotate(7.5deg);
+    }
+}
+
+.container.start .comp-result {
+    animation: compShake 0.7s ease infinite;
+}
+@keyframes compShake {
+    50%{
+        transform: rotate(-10deg);
+    }
+}
+
+.result-images img {
+    width: 280px;
+}
+
+.user-result img {
+    transform: rotate(45deg);
+}
+
+.comp-result img {
+    transform: rotate(-45deg) rotateY(180deg);
+}
+
+.result {
+    text-align: center;
+    font-size: 1.5rem;
+    color:rgb(137, 134, 46);
+    font-weight: 800;
+}
+
+.option-image img {
+    margin-top: 1rem;
+    width: 130px;
+}
+
+.option-images {
+    display: flex;
+    margin-top: 2.5rem;
+    justify-content: space-evenly;   
+}
+
+.container.start .option-images{
+    pointer-events: none;
+}
+
+.option-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+.option-image:hover {
+    opacity: 1;
+}
+
+.option-image.active {
+    opacity: 1;
+}
+
+.option-image img{
+    pointer-events: none;
+}
+
+.option-image p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    color: rgb(137, 134, 46);
+    pointer-events: none;
+}
